@@ -261,8 +261,8 @@ lsp.save()
 s = SimpleSequencing()
 
 s = SimpleSequencing()
-s.assignActivityTree(j,POO)
-s.assignActivityTree(p,POO)
+s.assignActivityTree(j,agua)
+s.assignActivityTree(p,agua)
 
 
 estudiantes = [
@@ -305,7 +305,7 @@ for e in estudiantes:
 
     lsu.save()
     ss = SimpleSequencing()
-    ss.assignActivityTree(u,POO)
+    ss.assignActivityTree(u,agua)
 
 
 import os
