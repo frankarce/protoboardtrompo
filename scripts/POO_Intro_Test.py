@@ -50,8 +50,8 @@ description= u"""
         <p> En este curso aprenderemos cosas relacionadas con el agua .</p>"""
 
 
-cursoPOO = Course(short_description=description, root=agua)
-cursoPOO.save()
+cursoagua = Course(short_description=description, root=agua)
+cursoagua.save()
 
 #pretest = LearningActivity( name = 'pretest', slug = 'pretest',
 #    uri = "/test/pretest",
@@ -74,9 +74,9 @@ cursoPOO.save()
 #pretest.save()
 
 
-##############################          2
-historia = LearningActivity( name = 'Historia', slug = 'Historia',
-    uri = "/activity/Historia",
+##############################     agua definicion
+Aguadef = LearningActivity( name = 'Aguadef', slug = 'Aguadef',
+    uri = "/activity/Agua",
 #   lom =
     parent = agua, root  = agua,
     post_condition_rule = "",
@@ -92,31 +92,122 @@ historia = LearningActivity( name = 'Historia', slug = 'Historia',
     is_visible = False,
     order_in_container = 1
     )
-historia.save()
+Aguadef.save()
 
+##############################     agua definicion
 
-#Karaoke = LearningActivity( name = 'karaoke', slug = 'karaoke',
-#    uri = "/activity/Karaoke",
+cicloagua = LearningActivity( name = 'cicloAgua', slug = 'cicloAgua',
+    uri = "/activity/ciclo",
 #   lom =
-#    parent = POO, root  = POO,
-#    post_condition_rule = "",
+    parent = agua, root  = agua,
+    post_condition_rule = "",
 
-#    flow = True,
-#    forward_only = False,
-#    choice = False,
+    flow = True,
+    forward_only = False,
+    choice = False,
 
-#    rollup_rule  = "",
-#    rollup_objective = True,
-#    rollup_progress = True,
-#    is_container = False,
-#    is_visible = False,
-#    order_in_container = 11
-#    )
-#Karaoke.save()
+    rollup_rule  = "",
+    rollup_objective = True,
+    rollup_progress = True,
+    is_container = True,
+    is_visible = False,
+    order_in_container = 2
+    )
+cicloagua.save()
+cantidad = LearningActivity( name = 'cantidad', slug = 'cantidad',
+    uri = "/activity/cantidad",
+#   lom =
+    parent = agua, root  = agua,
+    post_condition_rule = "",
+
+    flow = True,
+    forward_only = False,
+    choice = False,
+
+    rollup_rule  = "",
+    rollup_objective = True,
+    rollup_progress = True,
+    is_container = True,
+    is_visible = False,
+    order_in_container = 3
+    )
+cantidad.save()
+porciento = LearningActivity( name = 'porciento', slug = 'porciento',
+    uri = "/activity/porciento",
+#   lom =
+    parent = agua, root  = agua,
+    post_condition_rule = "",
+
+    flow = True,
+    forward_only = False,
+    choice = False,
+
+    rollup_rule  = "",
+    rollup_objective = True,
+    rollup_progress = True,
+    is_container = True,
+    is_visible = False,
+    order_in_container = 4
+    )
+porciento.save()
+energia = LearningActivity( name = 'energia', slug = 'energia',
+    uri = "/activity/energia",
+#   lom =
+    parent = agua, root  = agua,
+    post_condition_rule = "",
+
+    flow = True,
+    forward_only = False,
+    choice = False,
+
+    rollup_rule  = "",
+    rollup_objective = True,
+    rollup_progress = True,
+    is_container = True,
+    is_visible = False,
+    order_in_container = 5
+    )
+energia.save()
+fotosis = LearningActivity( name = 'fotosis', slug = 'fotosis',
+    uri = "/activity/fotosis",
+#   lom =
+    parent = agua, root  = agua,
+    post_condition_rule = "",
+
+    flow = True,
+    forward_only = False,
+    choice = False,
+
+    rollup_rule  = "",
+    rollup_objective = True,
+    rollup_progress = True,
+    is_container = True,
+    is_visible = False,
+    order_in_container = 6
+    )
+fotosis.save()
+materia = LearningActivity( name = 'materia', slug = 'materia',
+    uri = "/activity/materia",
+#   lom =
+    parent = agua, root  = agua,
+    post_condition_rule = "",
+
+    flow = True,
+    forward_only = False,
+    choice = False,
+
+    rollup_rule  = "",
+    rollup_objective = True,
+    rollup_progress = True,
+    is_container = True,
+    is_visible = False,
+    order_in_container = 7
+    )
+fotosis.save()
 test = LearningActivity( name = 'test', slug = 'test',
     uri = "/test/test",
 #   lom = ,
-    parent = POO, root  = POO,
+    parent = agua, root  = agua,
 
     pre_condition_rule = """if self.num_attempts == 0 :
  self.pre_condition = 'stopForwardTraversal'
@@ -132,7 +223,7 @@ else:
 
     is_container = False,
     is_visible = False,
-    order_in_container = 11
+    order_in_container = 8
     )
 test.save()
 

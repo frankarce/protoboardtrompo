@@ -3,7 +3,7 @@ contextactivities = {
               '/activity/POO':[":5984/objetos/objetos/clases.jpg,play,imagen,1",":5984/objetos/objetos/descarga.jpg,play,imagen,2"],
 
 
-              '/activity/agua': [{'url': ':5984/objetos/objetostrompo/agua1.jpg', 'estado': 'play', 'dispositivo': '1', 'tipo': 'imagen'} ,
+              '/activity/Agua': [{'url': ':5984/objetos/objetostrompo/agua1.jpg', 'estado': 'play', 'dispositivo': '1', 'tipo': 'imagen'} ,
                                         {'url': ':5984/objetos/objetostrompo/agua1.jpg', 'estado': 'play', 'dispositivo': '2', 'tipo': 'imagen'} ,
                                         {'url': ':5984/objetos/objetostrompo/agua1.jpg', 'estado': 'play', 'dispositivo': '3', 'tipo': 'imagen'} ,
                                         {'url': ':5984/objetos/objetos/autores1.mp3', 'estado': 'play', 'dispositivo': '4', 'tipo': 'audio'} ,],
@@ -32,7 +32,10 @@ contextactivities = {
                                         {'url': ':5984/objetos/objetostrompo/agua1.jpg', 'estado': 'play', 'dispositivo': '2', 'tipo': 'imagen'} ,
                                         {'url': ':5984/objetos/objetostrompo/agua1.jpg', 'estado': 'play', 'dispositivo': '3', 'tipo': 'imagen'} ,
                                         {'url': ':5984/objetos/objetos/autores1.mp3', 'estado': 'play', 'dispositivo': '4', 'tipo': 'audio'} ,],
-
+              '/activity/materia': [{'url': ':5984/objetos/objetostrompo/agua1.jpg', 'estado': 'play', 'dispositivo': '1', 'tipo': 'imagen'} ,
+                                        {'url': ':5984/objetos/objetostrompo/agua1.jpg', 'estado': 'play', 'dispositivo': '2', 'tipo': 'imagen'} ,
+                                        {'url': ':5984/objetos/objetostrompo/agua1.jpg', 'estado': 'play', 'dispositivo': '3', 'tipo': 'imagen'} ,
+                                        {'url': ':5984/objetos/objetos/autores1.mp3', 'estado': 'play', 'dispositivo': '4', 'tipo': 'audio'} ,],
 
 
               '/test/test':[{'url': ':5984/objetos/objetos/loading.gif', 'estado': 'play', 'dispositivo': '1', 'tipo': 'imagen'} ,

@@ -2,8 +2,16 @@
 #!/usr/bin/env python
 print "actividades"
 activities = {
-'/activity/Historia': u""" """,
-'/activity/Himno': u""" Un himno es una composición poética o musical de tono solemne que representa y ensalza a una organización o un país y en cuyo honor se interpreta en actos públicos. """,
+'/activity/': u""" """,
+'/activity/Agua': u""" Un himno es una composición poética o musical de tono solemne que representa y ensalza a una organización o un país y en cuyo honor se interpreta en actos públicos. """,
+'/activity/ciclo': u""" Un himno es una composición poética o musical de tono solemne que representa y ensalza a una organización o un país y en cuyo honor se interpreta en actos públicos. """,
+'/activity/cantidad': u""" Un himno es una composición poética o musical de tono solemne que representa y ensalza a una organización o un país y en cuyo honor se interpreta en actos públicos. """,
+'/activity/porciento': u""" Un himno es una composición poética o musical de tono solemne que representa y ensalza a una organización o un país y en cuyo honor se interpreta en actos públicos. """,
+'/activity/energia': u""" Un himno es una composición poética o musical de tono solemne que representa y ensalza a una organización o un país y en cuyo honor se interpreta en actos públicos. """,
+'/activity/fotosis': u""" Un himno es una composición poética o musical de tono solemne que representa y ensalza a una organización o un país y en cuyo honor se interpreta en actos públicos. """,
+'/activity/materia': u""" Un himno es una composición poética o musical de tono solemne que representa y ensalza a una organización o un país y en cuyo honor se interpreta en actos públicos. """,
+'/activity/xzctest': u""" Un himno es una composición poética o musical de tono solemne que representa y ensalza a una organización o un país y en cuyo honor se interpreta en actos públicos. """,
+
 '/activity/Historia1': u"""Desde 1821 aparecieron varias propuestas de himno nacional, pero ninguna se adoptó. En 1853, Antonio López de Santa Anna convocó a un concurso para elegir un himno mediante el ministerio de Fomento, Colonización, Industria y Comercio, cuyo oficial mayor era Miguel Lerdo de Tejada, para mejorar su popularidad, que venía en decadencia.
                         El objetivo era recibir composiciones poéticas entre las que habría de seleccionarse la letra del Himno nacional mexicano, y a la cual, posteriormente, se arreglaría la música de algún destacado maestro. El resultado se publicó tras el estallido de la Revolución de Ayutla. El 12 de noviembre de 1853. """,
 '/activity/Historia2': u"""Desde 1821 aparecieron varias propuestas de himno nacional, pero ninguna se adoptó. En 1853, Antonio López de Santa Anna convocó a un concurso para elegir un himno mediante el ministerio de Fomento, Colonización, Industria y Comercio, cuyo oficial mayor era Miguel Lerdo de Tejada, para mejorar su popularidad, que venía en decadencia.
