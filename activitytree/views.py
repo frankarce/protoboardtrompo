@@ -33,7 +33,7 @@ import json
 from django.conf import settings
 from FIS import *
 import redis
-ipmaster="http://11.0.0.4"
+ipmaster="http://127.0.0.1"
 ipmasterredis="localhost"
 az=redis.Redis(ipmasterredis)
 def logout(request):
@@ -74,7 +74,7 @@ def activity(request,uri):
 
         # Gets the root of the User Learning Activity
         root = UserLearningActivity.objects.filter(learning_activity = requested_activity.learning_activity.get_root() ,user = request.user )[0]
-        #Aqui mando la actividad actual a redis para que la escuche el script que manejara la actividad de el muestreo de kinect
+
 
 
 
@@ -98,6 +98,7 @@ def activity(request,uri):
                 # Go TO NEXT ACTIVITY
 
                 next_uri = s.get_next(root)
+                #Aqui mando la actividad actual a redis para que la escuche el script que manejara la actividad de el muestreo de kinect
                 az.set(request.user,next_uri)
                 if next_uri=="/activity/POO" or next_uri==None:
                     actividad= " "
@@ -504,13 +505,13 @@ def pool_writting(direccion,user):
         urltemp=a["url"].split(".")
         #print a["dispositivo"]
         if a["dispositivo"]=="1":
-            az.set(a["dispositivo"], {"url":ipmaster + urltemp[0]+"r1080."+urltemp[1],"estado":a["estado"],"tipo":a["tipo"]})
-
+            az.set(a["dispositivo"], {"url":ipmaster + urltemp[0]+"."+urltemp[1],"estado":a["estado"],"tipo":a["tipo"]})
+            print
         elif a["dispositivo"]=="3":
-            az.set(a["dispositivo"], {"url":ipmaster + urltemp[0]+"r1440."+urltemp[1],"estado":a["estado"],"tipo":a["tipo"]})
+            az.set(a["dispositivo"], {"url":ipmaster + urltemp[0]+"."+urltemp[1],"estado":a["estado"],"tipo":a["tipo"]})
 
         elif a["dispositivo"]=="2":
-            az.set(a["dispositivo"], {"url":ipmaster + urltemp[0]+"r2560."+urltemp[1],"estado":a["estado"],"tipo":a["tipo"]})
+            az.set(a["dispositivo"], {"url":ipmaster + urltemp[0]+"."+urltemp[1],"estado":a["estado"],"tipo":a["tipo"]})
 
         else:
             az.set(a["dispositivo"], {"url":ipmaster + a["url"],"estado":a["estado"],"tipo":a["tipo"]})

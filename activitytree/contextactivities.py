@@ -23,7 +23,7 @@ contextactivities = {
                                         {'url': ':5984/objetos/objetostrompo/energia3.jpg', 'estado': 'play', 'dispositivo': '3', 'tipo': 'imagen'} ,
                                         {'url': ':5984/objetos/objetos/nosound.mp3', 'estado': 'play', 'dispositivo': '4', 'tipo': 'audio'} ,],
 
-              '/activity/fotosintesis': [{'url': ':5984/objetos/objetostrompo/fotosin.jpg', 'estado': 'play', 'dispositivo': '1', 'tipo': 'imagen'} ,
+              '/activity/fotosis': [{'url': ':5984/objetos/objetostrompo/fotosin.jpg', 'estado': 'play', 'dispositivo': '1', 'tipo': 'imagen'} ,
                                         {'url': ':5984/objetos/objetostrompo/fotosin2.jpg', 'estado': 'play', 'dispositivo': '2', 'tipo': 'imagen'} ,
                                         {'url': ':5984/objetos/objetostrompo/fotosin3.jpg', 'estado': 'play', 'dispositivo': '3', 'tipo': 'imagen'} ,
                                         {'url': ':5984/objetos/objetos/nosound.mp3', 'estado': 'play', 'dispositivo': '4', 'tipo': 'audio'} ,],

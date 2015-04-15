@@ -8,7 +8,7 @@ activities = {
 '/activity/cantidad': u""" Un himno es una composición poética o musical de tono solemne que representa y ensalza a una organización o un país y en cuyo honor se interpreta en actos públicos. """,
 '/activity/porciento': u""" Un himno es una composición poética o musical de tono solemne que representa y ensalza a una organización o un país y en cuyo honor se interpreta en actos públicos. """,
 '/activity/energia': u""" Un himno es una composición poética o musical de tono solemne que representa y ensalza a una organización o un país y en cuyo honor se interpreta en actos públicos. """,
-'/activity/fotosis': u""" Un himno es una composición poética o musical de tono solemne que representa y ensalza a una organización o un país y en cuyo honor se interpreta en actos públicos. """,
+'/activity/salud': u""" Un himno es una composición poética o musical de tono solemne que representa y ensalza a una organización o un país y en cuyo honor se interpreta en actos públicos. """,
 '/activity/materia': u""" Un himno es una composición poética o musical de tono solemne que representa y ensalza a una organización o un país y en cuyo honor se interpreta en actos públicos. """,
 '/activity/xzctest': u""" Un himno es una composición poética o musical de tono solemne que representa y ensalza a una organización o un país y en cuyo honor se interpreta en actos públicos. """,
 
@@ -47,7 +47,7 @@ libertad de la patria y del pueblo. Por eso la letra del himno nacional invita a
       <p> . </p>
     """,
 '/activity/POO':u""" <h3 id="welcome">Bienvenidos</h3>
-      <p>Bienvenidos en esta clase aprenderás sobre la historia del Himno Nacional Mexicano. Detalles acerca del concurso para seleccionar letra y musica, tambien sobre la vida de los autores y algunas curiosidades.</p>
+      <p>Bienvenidos en esta ocacion aprenderemos sobre el agua.</p>
 
 
 
@@ -199,68 +199,88 @@ el m&eacute;todo correcto a aplicar en funci&oacute;n del tipo de datos pasados 
 
     """ ,
 
-'/test/test':{
+'/test/testaguadef':{
     'questions':  [{'id': 1324,
                     'interaction': 'choiceInteraction',
                     'inline': 0 ,
-                    'title': "Pregunta Abierta",
-                    'question': "De que pais es el himno nacional del cual estamos hablando?",
+                    'title': "Opcion multiple",
+                    'question': "¿Que es el agua?",
                     'can_check': "True",
                     'can_show': "True",
                     'can_hint': "True",
-                    'options': ["Mexico","USA","Nicaragua","España"],
-                    'answer': [1,0,0,0],
-                    'answer_text': "México",
+                    'options': ["Un gas","Una pelota","Una sustancia","Un hielo"],
+                    'answer': [0,0,1,0],
+                    'answer_text': "Una sustancia",
                     'hints': ["", ""]
                     },
                     {
                     'id':1323,
                     'interaction': 'choiceInteraction',
                     'inline': 1,
-                    'title': "Pregunta Abierta",
-                    'question': "Nombre de los autores de letra y musica del Himno Nacional Mexicano",
+                    'title': "Opcion multiple",
+                    'question': "¿Cuales y cuantos componentes quimicos forman una molecula de agua?",
                     'can_check': "True",
                     'can_show': "True",
                     'can_hint': "True",
-                    'options': ["Jaime Nuno Roca","Vicente Fox Quezada","Francisco Gonzales Bocanegra","Enrique Peña Nieto"],
-                    'answer': [1,0,1,0],
+                    'options': ["Uno de hidrogeno y 2 de oxigeno","Una de oxigeno y 2 de hidrogeno","2 de azufre y una de calcio","ninguna"],
+                    'answer': [1,0,0,0],
                     },
                     {
                     'id':1322,
                     'interaction': 'choiceInteraction',
                     'inline': 1,
-                    'title': "Pregunta Abierta",
-                    'question': "¿En qué fecha se cantó por primera vez de manera oficial?",
+                    'title': "Opcion multiple",
+                    'question': "¿Para que es esencial el agua?",
                     'can_check': "True",
                     'can_show': "True",
                     'can_hint': "True",
-                    'options': ["2003","1954","1854","1810"],
+                    'options': ["Para la supervivencia de todas las formas conocidas de vida.","Para la hidratacion.","Para digerir bien la comida","Para refrescarme."],
                     'answer': [0,1,0,0],
+                    }
+                    ],
+    'intro':"""<h3>Evaluación</h3>
+    <p> Contesta las preguntas, eligiendo la opción mas adecuada de la lista </p>""",
+    'bye':"""""",
+     'satisfied_at_least':0
+                    },
+##### primer test
+'/test/testcicloagua':{
+    'questions':  [{'id': 1324,
+                    'interaction': 'choiceInteraction',
+                    'inline': 0 ,
+                    'title': "Opcion multiple",
+                    'question': "¿Que es el agua?",
+                    'can_check': "True",
+                    'can_show': "True",
+                    'can_hint': "True",
+                    'options': ["Un gas","Una pelota","Una sustancia","Un hielo"],
+                    'answer': [0,0,1,0],
+                    'answer_text': "Una sustancia",
+                    'hints': ["", ""]
                     },
                     {
-                    'id':1321,
+                    'id':1323,
                     'interaction': 'choiceInteraction',
                     'inline': 1,
-                    'title': "Pregunta Abierta",
-                    'question': "¿Quienes fueron los interpretes?",
+                    'title': "Opcion multiple",
+                    'question': "¿Cuales y cuantos componentes quimicos forman una molecula de agua?",
                     'can_check': "True",
                     'can_show': "True",
                     'can_hint': "True",
-                    'options': ["Una compañía de ópera Canadiense","Una compañía de ópera Mexicana","Una compañía de ópera Italiana","Una compañía de ópera Española"],
-                    'answer': [0,0,1,0],
+                    'options': ["Uno de hidrogeno y 2 de oxigeno","Una de oxigeno y 2 de hidrogeno","2 de azufre y una de calcio","ninguna"],
+                    'answer': [1,0,0,0],
                     },
                     {
-                    'id':1320,
-                    'interaction': 'textEntryInteraction',
-                    'inline': 0,
-                    'title': "Pregunta Abierta",
-                    'question': "Quien fue el presidente que lanzo la convocatoria para crear el Himno Nacional Mexicano?",
+                    'id':1322,
+                    'interaction': 'choiceInteraction',
+                    'inline': 1,
+                    'title': "Opcion multiple",
+                    'question': "¿Para que es esencial el agua?",
                     'can_check': "True",
                     'can_show': "True",
                     'can_hint': "True",
-                    'options': [],
-                    'type':"str",
-                    'answer': ["Antonio Lopez de Santa Anna", "antonio lopez de santa anna"],
+                    'options': ["Para la supervivencia de todas las formas conocidas de vida.","Para la hidratacion.","Para digerir bien la comida","Para refrescarme."],
+                    'answer': [0,1,0,0],
                     }
                     ],
     'intro':"""<h3>Evaluación</h3>
