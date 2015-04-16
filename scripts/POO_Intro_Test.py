@@ -95,7 +95,7 @@ Aguadef = LearningActivity( name = 'Aguadef', slug = 'Aguadef',
 Aguadef.save()
 
 testaguadef = LearningActivity( name = 'test', slug = 'test',
-    uri = "/test/test",
+    uri = "/test/testaguadef",
 #   lom = ,
     parent = agua, root  = agua,
 
@@ -113,13 +113,13 @@ else:
 
     is_container = False,
     is_visible = False,
-    order_in_container = 10
+    order_in_container = 2
     )
 testaguadef.save()
 
 
 cicloagua = LearningActivity( name = 'cicloAgua', slug = 'cicloAgua',
-    uri = "/activity/ciclo",
+    uri = "/activity/cicloagua",
 #   lom =
     parent = agua, root  = agua,
     post_condition_rule = "",
@@ -133,12 +133,12 @@ cicloagua = LearningActivity( name = 'cicloAgua', slug = 'cicloAgua',
     rollup_progress = True,
     is_container = False,
     is_visible = False,
-    order_in_container = 2
+    order_in_container = 3
     )
 cicloagua.save()
 
 testcicloagua = LearningActivity( name = 'test', slug = 'test',
-    uri = "/test/test",
+    uri = "/test/testcicloagua",
 #   lom = ,
     parent = agua, root  = agua,
 
@@ -156,7 +156,7 @@ else:
 
     is_container = False,
     is_visible = False,
-    order_in_container = 10
+    order_in_container = 4
     )
 testcicloagua.save()
 
@@ -175,11 +175,11 @@ cantidad = LearningActivity( name = 'cantidad', slug = 'cantidad',
     rollup_progress = True,
     is_container = False,
     is_visible = False,
-    order_in_container = 3
+    order_in_container = 5
     )
 cantidad.save()
 testcantidad = LearningActivity( name = 'test', slug = 'test',
-    uri = "/test/test",
+    uri = "/test/testcantidad",
 #   lom = ,
     parent = agua, root  = agua,
 
@@ -197,7 +197,7 @@ else:
 
     is_container = False,
     is_visible = False,
-    order_in_container = 10
+    order_in_container = 6
     )
 testcantidad.save()
 
@@ -216,11 +216,11 @@ porciento = LearningActivity( name = 'porciento', slug = 'porciento',
     rollup_progress = True,
     is_container = False,
     is_visible = False,
-    order_in_container = 4
+    order_in_container = 7
     )
 porciento.save()
 testporciento = LearningActivity( name = 'test', slug = 'test',
-    uri = "/test/test",
+    uri = "/test/testporciento",
 #   lom = ,
     parent = agua, root  = agua,
 
@@ -238,7 +238,7 @@ else:
 
     is_container = False,
     is_visible = False,
-    order_in_container = 10
+    order_in_container = 8
     )
 testporciento.save()
 
@@ -257,11 +257,11 @@ energia = LearningActivity( name = 'energia', slug = 'energia',
     rollup_progress = True,
     is_container = False,
     is_visible = False,
-    order_in_container = 5
+    order_in_container = 9
     )
 energia.save()
 testenergia = LearningActivity( name = 'test', slug = 'test',
-    uri = "/test/test",
+    uri = "/test/testenergia",
 #   lom = ,
     parent = agua, root  = agua,
 
@@ -284,7 +284,7 @@ else:
 testenergia.save()
 
 salud = LearningActivity( name = 'fotosis', slug = 'fotosis',
-    uri = "/activity/fotosis",
+    uri = "/activity/salud",
 #   lom =
     parent = agua, root  = agua,
     post_condition_rule = "",
@@ -298,11 +298,11 @@ salud = LearningActivity( name = 'fotosis', slug = 'fotosis',
     rollup_progress = True,
     is_container = False,
     is_visible = False,
-    order_in_container = 6
+    order_in_container = 11
     )
 salud.save()
 testsalud = LearningActivity( name = 'test', slug = 'test',
-    uri = "/test/test",
+    uri = "/test/testsalud",
 #   lom = ,
     parent = agua, root  = agua,
 
@@ -320,7 +320,7 @@ else:
 
     is_container = False,
     is_visible = False,
-    order_in_container = 10
+    order_in_container = 12
     )
 testsalud.save()
 
@@ -339,11 +339,11 @@ materia = LearningActivity( name = 'materia', slug = 'materia',
     rollup_progress = True,
     is_container = False,
     is_visible = False,
-    order_in_container = 7
+    order_in_container = 13
     )
 materia.save()
 testmateria = LearningActivity( name = 'test', slug = 'test',
-    uri = "/test/test",
+    uri = "/test/testmateria",
 #   lom = ,
     parent = agua, root  = agua,
 
@@ -361,33 +361,9 @@ else:
 
     is_container = False,
     is_visible = False,
-    order_in_container = 10
+    order_in_container = 14
     )
 testmateria.save()
-
-test = LearningActivity( name = 'test', slug = 'test',
-    uri = "/test/test",
-#   lom = ,
-    parent = agua, root  = agua,
-
-    pre_condition_rule = """if self.num_attempts == 0 :
- self.pre_condition = 'stopForwardTraversal'
-else:
- self.pre_condition = 'hidden'""",
-    post_condition_rule = "" ,
-
-    rollup_rule  = "",
-    rollup_objective = True,
-    rollup_progress = True,
-    choice_exit = False,
-
-
-    is_container = False,
-    is_visible = False,
-    order_in_container = 10
-    )
-test.save()
-
 
 
 
