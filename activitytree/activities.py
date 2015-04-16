@@ -299,7 +299,7 @@ el m&eacute;todo correcto a aplicar en funci&oacute;n del tipo de datos pasados 
                     'can_show': "True",
                     'can_hint': "True",
                     'options': ["Hidraulica.","Electrica.","Eolica.","Solar"],
-                    'answer': [0,0,1,0],
+                    'answer': [1,0,0,0],
                     'answer_text': "Una sustancia",
                     'hints': ["", ""]
                     },

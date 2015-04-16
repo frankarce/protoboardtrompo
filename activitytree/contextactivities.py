@@ -34,7 +34,7 @@ contextactivities = {
               '/activity/energia': [{'url': ':5984/objetos/objetostrompo/energia1.jpg', 'estado': 'play', 'dispositivo': '1', 'tipo': 'imagen'} ,
                                         {'url': ':5984/objetos/objetostrompo/energia2.jpg', 'estado': 'play', 'dispositivo': '2', 'tipo': 'imagen'} ,
                                         {'url': ':5984/objetos/objetostrompo/energia3.jpg', 'estado': 'play', 'dispositivo': '3', 'tipo': 'imagen'} ,
-                                        {'url': ':5984/objetos/objetostrompo/energia.mp3', 'estado': 'play', 'dispositivo': '4', 'tipo': 'audio'} ,],
+                                        {'url': ':5984/objetos/objetostrompo/energia .mp3', 'estado': 'play', 'dispositivo': '4', 'tipo': 'audio'} ,],
               '/test/testenergia':[{'url': ':5984/objetos/objetos/loading.gif', 'estado': 'play', 'dispositivo': '1', 'tipo': 'imagen'} ,
                             {'url': ':5984/objetos/objetos/loading.gif', 'estado': 'play', 'dispositivo': '2', 'tipo': 'imagen'} ,
                              {'url': ':5984/objetos/objetos/nosound.mp3', 'estado': 'play', 'dispositivo': '4', 'tipo': 'audio'} ,

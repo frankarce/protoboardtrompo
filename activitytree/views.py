@@ -33,7 +33,7 @@ import json
 from django.conf import settings
 from FIS import *
 import redis
-ipmaster="http://127.0.0.1"
+ipmaster="http://11.0.0.2"
 ipmasterredis="localhost"
 az=redis.Redis(ipmasterredis)
 def logout(request):
