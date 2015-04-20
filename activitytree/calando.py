@@ -17,7 +17,7 @@ happy=0
 engage=0
 away=0
 print time.ctime()
-while actividad!="/test/test":
+while actividad!="/test/Termine":
     print "entre aqui"
     d=[]
     happy="No"

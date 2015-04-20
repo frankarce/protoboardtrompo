@@ -33,7 +33,7 @@ import json
 from django.conf import settings
 from FIS import *
 import redis
-ipmaster="http://11.0.0.2"
+ipmaster="http://localhost"
 ipmasterredis="localhost"
 az=redis.Redis(ipmasterredis)
 def logout(request):
@@ -74,7 +74,7 @@ def activity(request,uri):
 
         # Gets the root of the User Learning Activity
         root = UserLearningActivity.objects.filter(learning_activity = requested_activity.learning_activity.get_root() ,user = request.user )[0]
-
+        #Aqui mando la actividad actual a redis para que la escuche el script que manejara la actividad de el muestreo de kinect
 
 
 
@@ -98,7 +98,6 @@ def activity(request,uri):
                 # Go TO NEXT ACTIVITY
 
                 next_uri = s.get_next(root)
-                #Aqui mando la actividad actual a redis para que la escuche el script que manejara la actividad de el muestreo de kinect
                 az.set(request.user,next_uri)
                 if next_uri=="/activity/POO" or next_uri==None:
                     actividad= " "
