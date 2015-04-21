@@ -496,8 +496,8 @@ def pool_writting(direccion,user):
     #objeto=contextactivities[direccion]
     rango=len(contextactivities[direccion])
 
-    for e in range(3):
-        az.set(str(e),  {"url":ipmaster+":5984/objetos/objetos/loading.gif","estado":"play","tipo":"imagen"})
+    # for e in range(3):
+    #     az.set(str(e),  {"url":ipmaster+":5984/objetos/objetos/loading.gif","estado":"play","tipo":"imagen"})
 
     for i in range(rango):
         a=contextactivities[direccion][i]
