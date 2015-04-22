@@ -36,7 +36,7 @@ contextactivities = {
 
               '/activity/energia': [{'url': ':5984/objetos/objetostrompo/energia1.jpg', 'estado': 'play', 'dispositivo': '1', 'tipo': 'imagen'} ,
                                         {'url': ':5984/objetos/objetostrompo/energia.mp4', 'estado': 'play', 'dispositivo': '2', 'tipo': 'video'} ,
-                                        {'url': ':5984/objetos/objetostrompo/energia3.jpg', 'estado': 'play', 'dispositivo': '3', 'tipo': 'imagen'} ,
+                                        {'url': ':5984/objetos/objetostrompo/energia2.jpg', 'estado': 'play', 'dispositivo': '3', 'tipo': 'imagen'} ,
                                         {'url': ':5984/objetos/objetostrompo/energia .mp3', 'estado': 'play', 'dispositivo': '4', 'tipo': 'audio'} ,],
               '/test/testenergia':[{'url': ':5984/objetos/objetostrompo/agua3.jpg', 'estado': 'play', 'dispositivo': '1', 'tipo': 'imagen'} ,
                             {'url': ':5984/objetos/objetostrompo/tests.jpg', 'estado': 'play', 'dispositivo': '2', 'tipo': 'imagen'} ,
@@ -63,14 +63,17 @@ contextactivities = {
 
               '/activity/materia': [{'url': ':5984/objetos/objetostrompo/materia1.jpg', 'estado': 'play', 'dispositivo': '1', 'tipo': 'imagen'} ,
                                         {'url': ':5984/objetos/objetostrompo/materia.mp4', 'estado': 'play', 'dispositivo': '2', 'tipo': 'video'} ,
-                                        {'url': ':5984/objetos/objetostrompo/materia3.gif', 'estado': 'play', 'dispositivo': '3', 'tipo': 'imagen'} ,
+                                        {'url': ':5984/objetos/objetostrompo/materia2.jpg', 'estado': 'play', 'dispositivo': '3', 'tipo': 'imagen'} ,
                                         {'url': ':5984/objetos/objetostrompo/materia.mp3', 'estado': 'play', 'dispositivo': '4', 'tipo': 'audio'} ,],
               '/test/testmateria':[{'url': ':5984/objetos/objetostrompo/agua3.jpg', 'estado': 'play', 'dispositivo': '1', 'tipo': 'imagen'} ,
                             {'url': ':5984/objetos/objetostrompo/tests.jpg', 'estado': 'play', 'dispositivo': '2', 'tipo': 'imagen'} ,
                              {'url': ':5984/objetos/objetos/nosound.mp3', 'estado': 'play', 'dispositivo': '4', 'tipo': 'audio'} ,
                               {'url': ':5984/objetos/objetostrompo/agua3.jpg', 'estado': 'play', 'dispositivo': '3', 'tipo': 'imagen'} ,],
 
-
+              '/activity/adios':[{'url': ':5984/objetos/objetostrompo/agua3.jpg', 'estado': 'play', 'dispositivo': '1', 'tipo': 'imagen'} ,
+                            {'url': ':5984/objetos/objetostrompo/agua3.jpg', 'estado': 'play', 'dispositivo': '2', 'tipo': 'imagen'} ,
+                             {'url': ':5984/objetos/objetos/nosound.mp3', 'estado': 'play', 'dispositivo': '4', 'tipo': 'audio'} ,
+                              {'url': ':5984/objetos/objetostrompo/agua3.jpg', 'estado': 'play', 'dispositivo': '3', 'tipo': 'imagen'} ,],
               '/test/test':[{'url': ':5984/objetos/objetos/loading.gif', 'estado': 'play', 'dispositivo': '1', 'tipo': 'imagen'} ,
                             {'url': ':5984/objetos/objetos/loading.gif', 'estado': 'play', 'dispositivo': '2', 'tipo': 'imagen'} ,
                              {'url': ':5984/objetos/objetos/nosound.mp3', 'estado': 'play', 'dispositivo': '4', 'tipo': 'audio'} ,

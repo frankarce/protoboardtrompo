@@ -10,7 +10,7 @@ activities = {
 '/activity/energia': u"""  """,
 '/activity/salud': u""" """,
 '/activity/materia': u"""  """,
-'/activity/xzctest': u"""  """,
+'/activity/adios': u""" Gracias por participar y aprender con esta actividad, Adios! """,
 
 '/activity/Historia1': u"""Desde 1821 aparecieron varias propuestas de himno nacional, pero ninguna se adoptó. En 1853, Antonio López de Santa Anna convocó a un concurso para elegir un himno mediante el ministerio de Fomento, Colonización, Industria y Comercio, cuyo oficial mayor era Miguel Lerdo de Tejada, para mejorar su popularidad, que venía en decadencia.
                         El objetivo era recibir composiciones poéticas entre las que habría de seleccionarse la letra del Himno nacional mexicano, y a la cual, posteriormente, se arreglaría la música de algún destacado maestro. El resultado se publicó tras el estallido de la Revolución de Ayutla. El 12 de noviembre de 1853. """,
@@ -47,7 +47,7 @@ libertad de la patria y del pueblo. Por eso la letra del himno nacional invita a
       <p> . </p>
     """,
 '/activity/POO':u""" <h3 id="welcome">Bienvenidos</h3>
-      <p>Bienvenidos en esta ocacion aprenderemos sobre el agua.</p>
+      <p>Bienvenidos en esta ocasión aprenderemos sobre el agua.</p>
     """
 ,
 '/activity/Bienvenidos': u""" <h3 id="welcome">Bienvenidos</h3>
@@ -171,7 +171,7 @@ el m&eacute;todo correcto a aplicar en funci&oacute;n del tipo de datos pasados 
    </p>
     """ ,
 
-'/test/testaguadef':{
+'/test/ciclo':{
     'questions':  [{'id': 1324,
                     'interaction': 'choiceInteraction',
                     'inline': 0 ,
@@ -216,7 +216,7 @@ el m&eacute;todo correcto a aplicar en funci&oacute;n del tipo de datos pasados 
      'satisfied_at_least':0
                     },
 ##### primer test
-'/test/testcicloagua':{
+'/test/testaguadef':{
     'questions':  [{'id': 1324,
                     'interaction': 'choiceInteraction',
                     'inline': 0 ,

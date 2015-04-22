@@ -47,7 +47,7 @@ agua = LearningActivity( name = 'El agua', slug = 'agua',
 
 agua.save()
 description= u"""
-        <p> En este curso aprenderemos cosas relacionadas con el agua .</p>"""
+        <p> En este curso aprenderemos cosas relacionadas con el agua.</p>"""
 
 
 cursoagua = Course(short_description=description, root=agua)
@@ -83,7 +83,7 @@ Aguadef1 = LearningActivity( name = 'Agua', slug = 'Agua',
 
     flow = True,
     forward_only = True,
-    choice = False,
+    choice = True,
 
     rollup_rule  = "",
     rollup_objective = True,
@@ -101,7 +101,7 @@ Aguadef = LearningActivity( name = 'Agua', slug = 'Agua',
 
     flow = True,
     forward_only = True,
-    choice = False,
+    choice = True,
 
     rollup_rule  = "",
     rollup_objective = True,
@@ -499,6 +499,27 @@ else:
 testmateria.save()
 
 
+# adios = LearningActivity( name = 'adios', slug = 'adios',
+#     uri = "/activity/adios",
+# #   lom =
+#     parent = agua, root  = agua,
+#     post_condition_rule = "",
+#     pre_condition_rule = """if self.user.learningstyleinventory.age > 17 :
+#  	                  self.pre_condition = 'skip' """,
+#     flow = True,
+#     forward_only = False,
+#     choice = False,
+#
+#     rollup_rule  = "",
+#     rollup_objective = True,
+#     rollup_progress = True,
+#     is_container = False,
+#     is_visible = False,
+#     order_in_container = 5
+#     )
+# adios.save()
+
+
 
 
 
@@ -537,8 +558,8 @@ s.assignActivityTree(p,agua)
 
 estudiantes = [
 ('edgar',          '1234',17,13,16,12,14,16,9, 25, 21),
-('osuna',       '1234',15,12,14,18,14,19,8, 18, 4),
-('malu',         '1234', 7,10, 4, 8,17,14,16, 18, 4),
+('osuna',       '1234',15,12,14,18,14,19,8, 15, 4),
+('malu',         '1234', 7,10, 4, 8,17,14,16, 12, 4),
 ('jose',        '1234',17, 6,16,13,14,11, 8, 18, 4),
 ('david',         '1234',15,10,13,14,17,15,11, 18, 4),
 ('juan',    '1234',11,13,11,10,13,18, 8, 18, 4),

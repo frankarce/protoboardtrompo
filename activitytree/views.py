@@ -33,8 +33,8 @@ import json
 from django.conf import settings
 from FIS import *
 import redis
-ipmaster="http://localhost"
-ipmasterredis="localhost"
+ipmaster="http://11.0.0.2"
+ipmasterredis="11.0.0.2"
 az=redis.Redis(ipmasterredis)
 def logout(request):
     """Logs out user"""
@@ -99,11 +99,13 @@ def activity(request,uri):
 
                 next_uri = s.get_next(root)
                 az.set(request.user,next_uri)
+                #
                 if next_uri=="/activity/POO" or next_uri==None:
                     actividad= " "
                 else:
                     actividad=next_uri
 
+                print actividad,request.user
                 pool_writting(actividad,request.user)
             elif request.POST['nav_event'] == 'prev':
                 # Go TO PREV ACTIVITY
@@ -256,7 +258,7 @@ def program(request,uri):
             if  request.POST['nav_event'] == 'next':
                 # Go TO NEXT ACTIVITY
                 next_uri = s.get_next(root)
-                pool_writting(next_uri)
+                pool_writting(next_uri,request.user)
             elif request.POST['nav_event'] == 'prev':
                 # Go TO PREV ACTIVITY
                 next_uri = s.get_prev(root)
@@ -488,16 +490,16 @@ def done(request):
     }, RequestContext(request))
 
 def pool_writting(direccion,user):
-    print user,direccion
-    if direccion==None:
+
+    if direccion==None or direccion=="":
         direccion='/woutobjects'
 
 
     #objeto=contextactivities[direccion]
     rango=len(contextactivities[direccion])
-
-    # for e in range(3):
-    #     az.set(str(e),  {"url":ipmaster+":5984/objetos/objetos/loading.gif","estado":"play","tipo":"imagen"})
+    print user,direccion
+    for e in range(3):
+         az.set(str(e),  {"url":ipmaster+":5984/objetos/objetostrompo/agua3.jpg","estado":"play","tipo":"imagen"})
 
     for i in range(rango):
         a=contextactivities[direccion][i]
@@ -514,5 +516,5 @@ def pool_writting(direccion,user):
 
         else:
             az.set(a["dispositivo"], {"url":ipmaster + a["url"],"estado":a["estado"],"tipo":a["tipo"]})
-            print "audios"
+
     return()
