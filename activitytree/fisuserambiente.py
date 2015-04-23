@@ -60,7 +60,9 @@ fis = FIS(Rules)
 def fisuser(a,b):
     Age.current_value=a
     Schoolar.current_value=b
+    print Age.current_value
+    print Schoolar.current_value
     return fis.eval( out_var = 0)
 
 if __name__ == '__main__':
-    print fisuser(25,18)
+    print fisuser(6,7)
