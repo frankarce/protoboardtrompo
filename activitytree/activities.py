@@ -10,6 +10,7 @@ activities = {
 '/activity/energia': u"""  """,
 '/activity/salud': u""" """,
 '/activity/materia': u"""  """,
+'/activity/Agua2': u"""  """,
 '/activity/adios': u""" Gracias por participar y aprender con esta actividad, Adios! """,
 
 '/activity/Historia1': u"""Desde 1821 aparecieron varias propuestas de himno nacional, pero ninguna se adoptó. En 1853, Antonio López de Santa Anna convocó a un concurso para elegir un himno mediante el ministerio de Fomento, Colonización, Industria y Comercio, cuyo oficial mayor era Miguel Lerdo de Tejada, para mejorar su popularidad, que venía en decadencia.
