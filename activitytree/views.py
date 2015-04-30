@@ -101,7 +101,7 @@ def activity(request,uri):
                 az.set(request.user,next_uri)
                 #
                 if next_uri=="/activity/POO" or next_uri==None:
-                    actividad= " "
+                    actividad=""
                 else:
                     actividad=next_uri
 
@@ -497,7 +497,8 @@ def pool_writting(direccion,user):
 
     #objeto=contextactivities[direccion]
     rango=len(contextactivities[direccion])
-    print user,direccion
+    print user
+    print type(direccion)
     for e in range(3):
          az.set(str(e),  {"url":ipmaster+":5984/objetos/objetostrompo/agua3.jpg","estado":"play","tipo":"imagen"})
 
