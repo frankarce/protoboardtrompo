@@ -3,12 +3,13 @@
 print "actividades"
 activities = {
 '/activity/': u""" """,
-'/activity/Agua': u"""  """,
-'/activity/cicloagua': u""" """,
-'/activity/cantidad': u"""  """,
-'/activity/porciento': u"""  """,
-'/activity/energia': u"""  """,
-'/activity/salud': u""" """,
+'/activity/protoboard': u""" <h3>Hola me llamo protoboard y soy una plataforma de código libre para el desarrollo de cursos e-Learning. </h3>  """,
+'/activity/quiensoy': u""" """,
+'/activity/quehago': u""" <h3>Integro técnicas de computación inteligente para el secuenciado, selección y la recomendación de los recursos didácticos entregados a los estudiantes.</h3> """,
+'/activity/manera': u"""<h3> Tu el aprendiz navegas a través de un árbol de aprendizaje tal como se ve en la imagen donde existen reglas de navegación que te guían a través de la actividad. <h3>""",
+'/activity/paraquesirvo': u"""<h3> Protoboard además de ser utilizado para el aprendizaje puede tener otros usos.</h3>""",
+
+'/activity/queuso': u""" <h3>Puedo funcionar gracias a servicios web, bases de datos relacionales y no relacionales, y dispositivos. </h3>""",
 '/activity/materia': u"""  """,
 '/activity/Agua2': u"""  """,
 '/activity/adios': u""" Gracias por participar y aprender con esta actividad, Adios! """,
@@ -48,7 +49,7 @@ libertad de la patria y del pueblo. Por eso la letra del himno nacional invita a
       <p> . </p>
     """,
 '/activity/POO':u""" <h3 id="welcome">Bienvenidos</h3>
-      <p>Bienvenidos en esta ocasión aprenderemos sobre el agua.</p>
+      <p>Bienvenidos hoy conoceremos a Protoboard.</p>
     """
 ,
 '/activity/Bienvenidos': u""" <h3 id="welcome">Bienvenidos</h3>

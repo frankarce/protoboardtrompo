@@ -9,9 +9,9 @@ from activitytree.models import LearningStyleInventory, LearningActivity, Course
 from django.contrib.auth.models import User
 from activitytree.interaction_handler import SimpleSequencing
 User.objects.filter(username='frank').delete()
-for i in range(20):
+for i in range(200):
 
-    nombre = "users"+str(i)
+    nombre = "a"+str(i)
     edad = 8
     grado = 8
     correo='ejemlo@ejemplo.com'

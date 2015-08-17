@@ -26,7 +26,7 @@ from activitytree.interaction_handler import SimpleSequencing
 
 LearningActivity.objects.all().delete()
 ##############################          1
-agua = LearningActivity( name = 'El agua', slug = 'agua',
+tec = LearningActivity( name = 'tec', slug = 'tec',
     uri = "/activity/POO",
     parent = None,
     root   = None,
@@ -45,12 +45,12 @@ agua = LearningActivity( name = 'El agua', slug = 'agua',
     order_in_container = 0
     )
 
-agua.save()
+tec.save()
 description= u"""
-        <p> En este curso aprenderemos cosas relacionadas con el agua.</p>"""
+        <p> Hoy conoceras a protoboard.</p>"""
 
 
-cursoagua = Course(short_description=description, root=agua)
+cursoagua = Course(short_description=description, root=tec)
 cursoagua.save()
 
 #pretest = LearningActivity( name = 'pretest', slug = 'pretest',
@@ -75,31 +75,11 @@ cursoagua.save()
 
 
 ##############################     agua definicion
-Aguadef1 = LearningActivity( name = 'Agua', slug = 'Agua',
-    uri = "/activity/Agua1",
+protoboard = LearningActivity( name = 'Protoboard', slug = 'Protoboard',
+    uri = "/activity/protoboard",
 #   lom =
-    parent = agua, root  = agua,
+    parent = tec, root  = tec,
     post_condition_rule = "",
-
-    flow = True,
-    forward_only = True,
-    choice = True,
-
-    rollup_rule  = "",
-    rollup_objective = True,
-    rollup_progress = True,
-    is_container = True,
-    is_visible = True,
-    order_in_container = 1
-    )
-Aguadef1.save()
-Aguadef = LearningActivity( name = 'Agua', slug = 'Agua',
-    uri = "/activity/Agua",
-#   lom =
-    parent = Aguadef1, root  = agua,
-    post_condition_rule = "",
-    pre_condition_rule = """if self.user.learningstyleinventory.age <= 8:
- 	                  self.pre_condition = 'skip' """,
 
     flow = True,
     forward_only = True,
@@ -112,13 +92,11 @@ Aguadef = LearningActivity( name = 'Agua', slug = 'Agua',
     is_visible = True,
     order_in_container = 1
     )
-Aguadef.save()
-Aguadef2 = LearningActivity( name = 'Agua', slug = 'Agua',
-    uri = "/activity/Agua2",
+protoboard.save()
+quehago = LearningActivity( name = 'quehago', slug = 'quehago',
+    uri = "/activity/quehago",
 #   lom =
-    parent = Aguadef1, root  = agua,
-    pre_condition_rule = """if self.user.learningstyleinventory.age >= 9:
- 	                  self.pre_condition = 'skip' """,
+    parent = tec, root  = tec,
     post_condition_rule = "",
 
     flow = True,
@@ -132,31 +110,109 @@ Aguadef2 = LearningActivity( name = 'Agua', slug = 'Agua',
     is_visible = True,
     order_in_container = 2
     )
-Aguadef2.save()
-testaguadef = LearningActivity( name = 'test agua', slug = 'test agua',
-    uri = "/test/testaguadef",
-#   lom = ,
-    parent = Aguadef1, root  = agua,
+quehago.save()
 
-    pre_condition_rule = """if self.user.learningstyleinventory.age <= 8 :
-                      self.pre_condition = 'skip'""",
-    post_condition_rule = "" ,
+manera = LearningActivity( name = 'manera', slug = 'manera',
+    uri = "/activity/manera",
+#   lom =
+    parent = tec, root  = tec,
+    post_condition_rule = "",
+
+    flow = True,
+    forward_only = True,
+    choice = True,
 
     rollup_rule  = "",
     rollup_objective = True,
     rollup_progress = True,
-
-    flow = True,
-    forward_only = True,
-    choice = False,
-
-
     is_container = False,
     is_visible = True,
     order_in_container = 3
     )
-testaguadef.save()
+manera.save()
 
+paraquesirvo = LearningActivity( name = 'paraquesirvo', slug = 'paraquesirvo',
+    uri = "/activity/paraquesirvo",
+#   lom =
+    parent = tec, root  = tec,
+    post_condition_rule = "",
+
+    flow = True,
+    forward_only = True,
+    choice = True,
+
+    rollup_rule  = "",
+    rollup_objective = True,
+    rollup_progress = True,
+    is_container = False,
+    is_visible = True,
+    order_in_container = 4
+    )
+paraquesirvo.save()
+# Aguadef = LearningActivity( name = 'Agua', slug = 'Agua',
+#     uri = "/activity/Agua",
+# #   lom =
+#     parent = Aguadef1, root  = agua,
+#     post_condition_rule = "",
+#     pre_condition_rule = """if self.user.learningstyleinventory.age <= 8:
+#  	                  self.pre_condition = 'skip' """,
+#
+#     flow = True,
+#     forward_only = True,
+#     choice = True,
+#
+#     rollup_rule  = "",
+#     rollup_objective = True,
+#     rollup_progress = True,
+#     is_container = False,
+#     is_visible = True,
+#     order_in_container = 1
+#     )
+# Aguadef.save()
+# Aguadef2 = LearningActivity( name = 'Agua', slug = 'Agua',
+#     uri = "/activity/Agua2",
+# #   lom =
+#     parent = Aguadef1, root  = agua,
+#     pre_condition_rule = """if self.user.learningstyleinventory.age >= 9:
+#  	                  self.pre_condition = 'skip' """,
+#     post_condition_rule = "",
+#
+#     flow = True,
+#     forward_only = True,
+#     choice = True,
+#
+#     rollup_rule  = "",
+#     rollup_objective = True,
+#     rollup_progress = True,
+#     is_container = False,
+#     is_visible = True,
+#     order_in_container = 2
+#     )
+# Aguadef2.save()
+# testaguadef = LearningActivity( name = 'test agua', slug = 'test agua',
+#     uri = "/test/testaguadef",
+# #   lom = ,
+#     parent = Aguadef1, root  = agua,
+#
+#     pre_condition_rule = """if self.user.learningstyleinventory.age <= 8 :
+#                       self.pre_condition = 'skip'""",
+#     post_condition_rule = "" ,
+#
+#     rollup_rule  = "",
+#     rollup_objective = True,
+#     rollup_progress = True,
+#
+#     flow = True,
+#     forward_only = True,
+#     choice = False,
+#
+#
+#     is_container = False,
+#     is_visible = True,
+#     order_in_container = 3
+#     )
+# testaguadef.save()
+#
 
 # cicloagua1 = LearningActivity( name = 'cicloAgua', slug = 'cicloAgua',
 #     uri = "/activity/cicloagua1",
@@ -278,103 +334,103 @@ testaguadef.save()
 #     )
 # testcantidad.save()
 
-porciento1 = LearningActivity( name = 'porciento', slug = 'porciento',
-    uri = "/activity/porciento1",
-#   lom =
-    parent = agua, root  = agua,
-    post_condition_rule = "",
-    pre_condition_rule = """if self.user.learningstyleinventory.age <= 8:
- 	                  self.pre_condition = 'skip' """,
-    flow = True,
-    forward_only = False,
-    choice = False,
-
-    rollup_rule  = "",
-    rollup_objective = True,
-    rollup_progress = True,
-    is_container = True,
-    is_visible = False,
-    order_in_container = 2
-    )
-porciento1.save()
-porciento = LearningActivity( name = 'porciento', slug = 'porciento',
-    uri = "/activity/porciento",
-#   lom =
-    parent = porciento1, root  = agua,
-    post_condition_rule = "",
-
-    flow = True,
-    forward_only = False,
-    choice = False,
-
-    rollup_rule  = "",
-    rollup_objective = True,
-    rollup_progress = True,
-    is_container = False,
-    is_visible = False,
-    order_in_container = 1
-    )
-porciento.save()
-testporciento = LearningActivity( name = 'test', slug = 'test',
-    uri = "/test/testporciento",
-#   lom = ,
-    parent = porciento1, root  = agua,
-
-    pre_condition_rule = """if self.num_attempts == 0 :
- self.pre_condition = 'stopForwardTraversal'
-else:
- self.pre_condition = 'hidden'""",
-    post_condition_rule = "" ,
-
-    rollup_rule  = "",
-    rollup_objective = True,
-    rollup_progress = True,
-    choice_exit = False,
-
-
-    is_container = False,
-    is_visible = False,
-    order_in_container = 2
-    )
-testporciento.save()
-
-energia1 = LearningActivity( name = 'energia', slug = 'energia',
-    uri = "/activity/energia1",
-#   lom =
-    parent = agua, root  = agua,
-    post_condition_rule = "",
-    pre_condition_rule = """if self.user.learningstyleinventory.age >= 9 :
- 	                  self.pre_condition = 'skip' """,
-    flow = True,
-    forward_only = False,
-    choice = False,
-
-    rollup_rule  = "",
-    rollup_objective = True,
-    rollup_progress = True,
-    is_container = True,
-    is_visible = False,
-    order_in_container = 3
-    )
-energia1.save()
-energia = LearningActivity( name = 'energia', slug = 'energia',
-    uri = "/activity/energia",
-#   lom =
-    parent = energia1, root  = agua,
-    post_condition_rule = "",
-
-    flow = True,
-    forward_only = False,
-    choice = False,
-
-    rollup_rule  = "",
-    rollup_objective = True,
-    rollup_progress = True,
-    is_container = False,
-    is_visible = False,
-    order_in_container = 1
-    )
-energia.save()
+# porciento1 = LearningActivity( name = 'porciento', slug = 'porciento',
+#     uri = "/activity/porciento1",
+# #   lom =
+#     parent = agua, root  = agua,
+#     post_condition_rule = "",
+#     pre_condition_rule = """if self.user.learningstyleinventory.age <= 8:
+#  	                  self.pre_condition = 'skip' """,
+#     flow = True,
+#     forward_only = False,
+#     choice = False,
+#
+#     rollup_rule  = "",
+#     rollup_objective = True,
+#     rollup_progress = True,
+#     is_container = True,
+#     is_visible = False,
+#     order_in_container = 2
+#     )
+# porciento1.save()
+# porciento = LearningActivity( name = 'porciento', slug = 'porciento',
+#     uri = "/activity/porciento",
+# #   lom =
+#     parent = porciento1, root  = agua,
+#     post_condition_rule = "",
+#
+#     flow = True,
+#     forward_only = False,
+#     choice = False,
+#
+#     rollup_rule  = "",
+#     rollup_objective = True,
+#     rollup_progress = True,
+#     is_container = False,
+#     is_visible = False,
+#     order_in_container = 1
+#     )
+# porciento.save()
+# testporciento = LearningActivity( name = 'test', slug = 'test',
+#     uri = "/test/testporciento",
+# #   lom = ,
+#     parent = porciento1, root  = agua,
+#
+#     pre_condition_rule = """if self.num_attempts == 0 :
+#  self.pre_condition = 'stopForwardTraversal'
+# else:
+#  self.pre_condition = 'hidden'""",
+#     post_condition_rule = "" ,
+#
+#     rollup_rule  = "",
+#     rollup_objective = True,
+#     rollup_progress = True,
+#     choice_exit = False,
+#
+#
+#     is_container = False,
+#     is_visible = False,
+#     order_in_container = 2
+#     )
+# testporciento.save()
+#
+# energia1 = LearningActivity( name = 'energia', slug = 'energia',
+#     uri = "/activity/energia1",
+# #   lom =
+#     parent = agua, root  = agua,
+#     post_condition_rule = "",
+#     pre_condition_rule = """if self.user.learningstyleinventory.age >= 9 :
+#  	                  self.pre_condition = 'skip' """,
+#     flow = True,
+#     forward_only = False,
+#     choice = False,
+#
+#     rollup_rule  = "",
+#     rollup_objective = True,
+#     rollup_progress = True,
+#     is_container = True,
+#     is_visible = False,
+#     order_in_container = 3
+#     )
+# energia1.save()
+# energia = LearningActivity( name = 'energia', slug = 'energia',
+#     uri = "/activity/energia",
+# #   lom =
+#     parent = energia1, root  = agua,
+#     post_condition_rule = "",
+#
+#     flow = True,
+#     forward_only = False,
+#     choice = False,
+#
+#     rollup_rule  = "",
+#     rollup_objective = True,
+#     rollup_progress = True,
+#     is_container = False,
+#     is_visible = False,
+#     order_in_container = 1
+#     )
+# energia.save()
 # testenergia = LearningActivity( name = 'test', slug = 'test',
 #     uri = "/test/testenergia",
 # #   lom = ,
@@ -572,8 +628,8 @@ lsp.save()
 s = SimpleSequencing()
 
 
-s.assignActivityTree(j,agua)
-s.assignActivityTree(p,agua)
+s.assignActivityTree(j,tec)
+s.assignActivityTree(p,tec)
 
 
 estudiantes = [
@@ -616,10 +672,10 @@ for e in estudiantes:
 
     lsu.save()
     ss = SimpleSequencing()
-    ss.assignActivityTree(u,agua)
+    ss.assignActivityTree(u,tec)
 
 
-print type(agua)
+
 import os
 #proot = UserLearningActivity.objects.filter(learning_activity = requested_activity.learning_activity.get_root() ,user = request.user )[0]
 proot = LearningStyleInventory.objects.filter(user = User.objects.filter(username='edgar'))[0]

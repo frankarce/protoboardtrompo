@@ -33,8 +33,8 @@ import json
 from django.conf import settings
 from FIS import *
 import redis
-ipmaster="http://11.0.0.2"
-ipmasterredis="11.0.0.2"
+ipmaster="http://127.0.0.1"
+ipmasterredis="127.0.0.1"
 az=redis.Redis(ipmasterredis)
 def logout(request):
     """Logs out user"""
@@ -98,7 +98,9 @@ def activity(request,uri):
                 # Go TO NEXT ACTIVITY
 
                 next_uri = s.get_next(root)
-                az.set(request.user,next_uri)
+                #az.set(request.user,next_uri)
+                az.set("user",request.user)
+                az.set("activity",next_uri)
                 #
                 if next_uri=="/activity/POO" or next_uri==None:
                     actividad=""
@@ -498,24 +500,28 @@ def pool_writting(direccion,user):
     #objeto=contextactivities[direccion]
     rango=len(contextactivities[direccion])
     print user
-    print type(direccion)
+    print direccion + "khe"
+    print rango
     for e in range(3):
-         az.set(str(e),  {"url":ipmaster+":5984/objetos/objetostrompo/agua3.jpg","estado":"play","tipo":"imagen"})
+         az.set(str(e),  {"url":ipmaster+":5984/objetos/tec/logo.jpg","estado":"play","tipo":"imagen"})
 
     for i in range(rango):
         a=contextactivities[direccion][i]
         urltemp=a["url"].split(".")
-        #print a["dispositivo"]
-        if a["dispositivo"]=="1":
-            az.set(a["dispositivo"], {"url":ipmaster + urltemp[0]+"."+urltemp[1],"estado":a["estado"],"tipo":a["tipo"]})
-            print
-        elif a["dispositivo"]=="3":
-            az.set(a["dispositivo"], {"url":ipmaster + urltemp[0]+"."+urltemp[1],"estado":a["estado"],"tipo":a["tipo"]})
+        print a
+        print "llegue aqui"
 
-        elif a["dispositivo"]=="2":
-            az.set(a["dispositivo"], {"url":ipmaster + urltemp[0]+"."+urltemp[1],"estado":a["estado"],"tipo":a["tipo"]})
+        # if a["dispositivo"]=="1":
 
-        else:
-            az.set(a["dispositivo"], {"url":ipmaster + a["url"],"estado":a["estado"],"tipo":a["tipo"]})
+        az.set(a["dispositivo"], {"url":ipmaster + a["url"] ,"estado":a["estado"],"tipo":a["tipo"]})
+        #
+        # elif a["dispositivo"]=="3":
+        #     az.set(a["dispositivo"], {"url":ipmaster + urltemp[0]+"."+urltemp[1],"estado":a["estado"],"tipo":a["tipo"]})
+        #
+        # elif a["dispositivo"]=="2":
+        #     az.set(a["dispositivo"], {"url":ipmaster + urltemp[0]+"."+urltemp[1],"estado":a["estado"],"tipo":a["tipo"]})
+        #
+        # else:
+        #     az.set(a["dispositivo"], {"url":ipmaster + a["url"],"estado":a["estado"],"tipo":a["tipo"]})
 
     return()
