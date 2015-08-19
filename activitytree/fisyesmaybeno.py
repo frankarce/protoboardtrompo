@@ -3,7 +3,7 @@ from FIS import *
 
 # Variables
 Yes = LinguisticVariable('Yes')
-Yes.addMF('L',MF.Triangular(0.0,33.33, 66.66))
+Yes.addMF('L',MF.Triangular(0,33.33, 66.66))
 Yes.addMF('M',MF.Triangular(33.33, 66.66, 80))
 Yes.addMF('H',MF.Triangular(66.66,80, 100))
 
@@ -243,4 +243,4 @@ def eval(a,b,c):
     return fis.eval(out_var = 0)
 
 if __name__ == '__main__':
-    print eval(64.9122807,	35.0877193,	0)
+    print eval(100,	0,	0)

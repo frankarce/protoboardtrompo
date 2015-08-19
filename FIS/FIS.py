@@ -63,9 +63,9 @@ class FuzzyRule:
         else:
             self.consequent = consequent
     
-    def getQualConsequence(self):
+    def getQualConsequence(self, out_var = 0 ):
         degreeOfSupport = self.antecedent[0].eval()
-        return QualConsequence(degreeOfSupport, self.consequent[0].mf)
+        return QualConsequence(degreeOfSupport, self.consequent[out_var].mf)
    
    
 class QualConsequence:
@@ -75,44 +75,38 @@ class QualConsequence:
     
     def eval(self, x):
         return min(self.degreeOfSupport, self.mf.eval(x))
-  
+
 class FIS():
     def __init__(self, rules = None):
         if rules == None:
             self.rules = []
         else:
             self.rules = rules
-def composition(self):
-	return [r.getQualConsequence() for r in self.rules]
+    def composition(self , out_var):
+		return [r.getQualConsequence(out_var) for r in self.rules]
 		
-def eval(self):
-    Composition = [r.getQualConsequence() for r in self.rules]
+    def eval(self, out_var):
+        Composition = [r.getQualConsequence(out_var) for r in self.rules]
+
+        smallest,largest = self.rules[0].consequent[out_var].lv.range
+        num = 0.0
+        denom = 0.0
         
+        delta = (largest - smallest) / 60.0
+        #delta = 0.1
+        x =float( smallest)
         
-    smallest,largest = self.rules[0].consequent[0].lv.range
-    num = 0.0
-    denom = 0.0
-        
-    delta = (largest - smallest) / 100.0
-        
-    x = smallest
-        
-    while x <= largest:
-            #m = 0.0;
-            m = max([q.eval(x) for q in Composition])
-            #for q in Composition:
-            #    mtest = q.eval(x)
-            #    if mtest > m:
-            #        m = mtest
-            #print mtest,  m , x
+        while x <= largest:
+            values = [q.eval(x) for q in Composition]
+            m = max(values)
             num += x * m
             denom += m;
             x+=delta
-    if denom == 0:
-           result = (0.0 + 10.0) / 2
-    else:
+        if denom == 0:
+           result = 0
+        else:
             result = num / denom   
-    return round(result,2)
+        return round(result,3)
 
 if __name__ == "__main__":
     pass
